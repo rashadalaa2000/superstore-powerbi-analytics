@@ -16,15 +16,16 @@ The dataset contains **51,290 records** and more than **25 columns**, sourced fr
 ---
 
 ## 🗂 Project Structure
-📁 Global-Superstore-Analysis
-│
-├── 📄 mapping.png # Data model diagram (Star Schema)
-├── 📄 Initialize_Star_Schema.sql # Create tables (Fact & Dimensions)
-├── 📄 Load_Star_Schema.sql # Load data into schema
-├── 📊 superstore analytics.pbix # Power BI dashboards (3 pages)
-├── 📦 superstore.zip # Raw dataset (CSV)
-├── 📄 insight.md # Business insights & findings
-└── 📄 README.md # Project documentation
+
+    Global-Superstore-Analysis/
+    │
+    ├── mapping.png                   # Star Schema diagram
+    ├── Initialize_Star_Schema.sql    # Create fact & dimension tables
+    ├── Load_Star_Schema.sql          # Load data into schema
+    ├── superstore analytics.pbix     # Power BI dashboards (3 pages)
+    ├── superstore.zip                # Raw dataset (CSV)
+    ├── insight.md                    # Business insights & findings
+    └── README.md                     # Project documentation
 
 
 ---
