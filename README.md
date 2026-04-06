@@ -1,94 +1,130 @@
-# 📊 Superstore Sales Analytics – Power BI Project
+# 📊 End-to-End Sales Analysis Using Power BI & SQL Server
 
 ## 🔍 Project Overview
-This project is an end-to-end Business Intelligence analysis built using **Power BI** and **SQL Server**.
-The workflow covers raw data ingestion, data cleaning, star schema modeling, and executive-level insights.
+This project demonstrates a complete **Business Intelligence workflow** starting from raw data to actionable insights.
 
-The dataset contains **51,290 records** and over **25 columns**, originally provided as a flat CSV file.
+The solution covers:
+- Raw CSV data ingestion
+- Data cleaning & transformation
+- Star Schema modeling in SQL Server
+- Data loading using SQL scripts
+- Interactive dashboards in Power BI
+- Business insights and analysis
+
+The dataset contains **51,290 records** and more than **25 columns**, sourced from Kaggle.
 
 ---
 
-## 📁 Repository Contents
-This repository includes the following files:
+## 🗂 Project Structure
+📁 Global-Superstore-Analysis
+│
+├── 📄 mapping.png # Data model diagram (Star Schema)
+├── 📄 Initialize_Star_Schema.sql # Create tables (Fact & Dimensions)
+├── 📄 Load_Star_Schema.sql # Load data into schema
+├── 📊 superstore analytics.pbix # Power BI dashboards (3 pages)
+├── 📦 superstore.zip # Raw dataset (CSV)
+├── 📄 insight.md # Business insights & findings
+└── 📄 README.md # Project documentation
 
-- **superstore_analytics.pbix**  
-  Power BI report containing the data model, DAX measures, and dashboards.
 
-- **star_schema.png**  
-  Star Schema design created in SQL Server, showing the fact and dimension tables.
+---
 
-- **superstore_dataset.zip**  
-  Zipped dataset used for this analysis (originally sourced from Kaggle).
-
-- **README.md**  
-  Project documentation and explanation.
+## 🛠 Tools & Technologies
+- SQL Server  
+- Power BI  
+- Power Query  
+- Star Schema Data Modeling  
 
 ---
 
 ## 🧱 Data Modeling
-The original flat CSV file was transformed into a **Star Schema** consisting of:
 
-### Fact Table
-- fact_sales
+The original flat CSV file was transformed into a **Star Schema** to improve performance and analytical capabilities.
 
-### Dimension Tables
-- dim_date  
-- dim_product  
-- dim_customer  
-- dim_location  
+### ⭐ Fact Table
+- `fact_sales`
 
-This modeling approach improves query performance, scalability, and analytical clarity.
+### 📐 Dimension Tables
+- `dim_date`
+- `dim_product`
+- `dim_customer`
+- `dim_location`
 
----
-
-## 🧹 Data Cleaning & Preparation
-Key data preparation steps included:
-- Removal of redundant columns
-- Resolving data type issues affecting **12,000+ profit values**
-- Standardizing numeric and date fields
-- Ensuring referential integrity between fact and dimension tables
+### 📌 Key Benefits
+- Improved query performance  
+- Better scalability  
+- Clear separation of business entities  
+- Optimized for analytical queries  
 
 ---
 
-## 📈 Dashboards
-The Power BI report includes three analytical dashboards:
+## ⚙️ Data Pipeline
 
-1. **Overview**
-2. **Profitability & Discount Analysis**
-3. **Customer Behavior Analysis**
-
-Additionally, an **Executive Insights** page summarizes key findings and business recommendations.
-
----
-
-## 🧠 Executive Insights Highlights
-
-### 1. Strategic Pricing & Profitability Optimization
-- Peak profitability (11.95%) aligned with the lowest average discount (14.03%)
-- Recommendation: Cap discounts at 14% for high-performing categories
-
-### 2. Customer Loyalty vs Discount Efficiency
-- High purchase frequency does not directly translate to higher profitability
-- Recommendation: Shift to a tiered loyalty program based on net profitability
-
-### 3. Category Performance & Risk Assessment
-- Identified sub-categories with high discounts and low profit
-- Recommendation: Re-evaluate pricing strategies for underperforming categories
+1. Extract data from CSV file  
+2. Clean and transform data using Power Query / SQL  
+3. Create Star Schema using:
+   - `Initialize_Star_Schema.sql`  
+4. Load data into tables using:
+   - `Load_Star_Schema.sql`  
+5. Connect Power BI to SQL Server  
+6. Build dashboards and visuals  
 
 ---
 
-## ⚠ Data Connection Note
-The Power BI report is connected to a local SQL Server instance used for data modeling.
-Since the database is not publicly hosted, data refresh may not work on other machines.
-All dashboards, relationships, and measures remain fully accessible for review.
+## 📈 Power BI Dashboards
+
+Three analytical dashboards were developed:
+
+### 1. Overview Dashboard
+- Total Sales, Profit, Quantity  
+- Sales trends over time  
+- Regional performance  
+
+### 2. Profitability & Discount Analysis
+- Impact of discounts on profit  
+- Loss-making products  
+- Category-level profitability  
+
+### 3. Customer Behavior Analysis
+- Top vs Bottom customers  
+- Customer segmentation  
+- Purchase patterns  
 
 ---
 
-## 🔗 Dataset Source
-Original dataset available on Kaggle:  
-*(https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset)*
+## 📊 Key Insights
+(See full details in `insight.md`)
+
+- High discounts often lead to **negative profit**
+- A small percentage of customers generate a large portion of revenue
+- Certain product categories consistently underperform
+- Regional differences significantly impact sales performance
 
 ---
 
-## 🚀 Key Takeaway
-This project demonstrates the ability to transform raw sales data into actionable business insights using industry-standard BI tools and dimensional modeling techniques.
+## 🚀 How to Run the Project
+
+### 1. Database Setup
+- Open SQL Server
+- Run:
+  - `Initialize_Star_Schema.sql`
+  - `Load_Star_Schema.sql`
+
+### 2. Power BI
+- Open `superstore analytics.pbix`
+- Update data source if needed
+- Refresh data
+
+---
+
+## 🎯 Project Objective
+The goal of this project is to simulate a **real-world BI solution** by:
+- Designing a scalable data model   
+- Creating business-ready dashboards  
+- Extracting meaningful insights for decision-making  
+
+---
+
+## 👨‍💻 Author
+**Rashad Alaa**  
+Data Analyst 
