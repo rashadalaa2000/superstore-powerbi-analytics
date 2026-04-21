@@ -51,11 +51,16 @@ The original flat CSV file was transformed into a **Star Schema** to improve per
 - `dim_customer`
 - `dim_location`
 
-### 📌 Key Benefits
-- Improved query performance  
-- Better scalability  
-- Clear separation of business entities  
-- Optimized for analytical queries  
+## 📊 Key Insights  
+*(See full details in insight.md)*
+
+- Higher discount levels are associated with lower profit margins, though this relationship may be influenced by other factors.
+
+- A small percentage of customers contribute disproportionately to total profit, indicating strong customer concentration.
+
+- Certain product categories consistently show lower profitability, suggesting potential pricing or cost inefficiencies.
+
+- Regional variations appear to impact sales and profitability, highlighting the importance of localized strategies.
 
 ---
 
